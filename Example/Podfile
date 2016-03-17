@@ -2,7 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'NOTIFIT-Swift_Example', :exclusive => true do
-  pod 'NOTIFIT-Swift', :path => '../Pod/Classes'
+  pod 'NOTIFIT-Swift', :path => '../'
 end
 
 target 'NOTIFIT-Swift_Tests', :exclusive => true do

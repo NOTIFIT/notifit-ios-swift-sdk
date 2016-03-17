@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0F61E7201BBA6ABB3F41E74C'
+               BlueprintIdentifier = 'A917DB58BE202E7E0D31A953'
                BlueprintName = 'NOTIFIT-Swift'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'NOTIFIT_Swift.framework'>

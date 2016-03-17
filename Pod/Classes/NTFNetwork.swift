@@ -15,16 +15,35 @@ class NTFNetwork: NSObject {
 	
 	func login(name: String, password: String){
 		let parameters = [
-			"username": "admin@admin.cz",
-			"password": "Fekal123"
+			"username": name,
+			"password": password
 		]
+		let test = self.gatherData()
+		debugPrint(test)
 		self.POST(parameters)
 	}
 	
+	
+	private func gatherData() -> Dictionary<String,AnyObject> {
+		let device = UIDevice.currentDevice()
+		return [
+			"DeviceName":device.name,
+			"DeviceSystemName" : device.systemName,
+			"DeviceSystemVersion" : device.systemVersion,
+			"DeviceModel" : device.model,
+			"DeviceLocalizedModel" : device.localizedModel,
+			"DeviceIdentifierForVendor" : device.identifierForVendor?.UUIDString ?? "",
+			"DeviceTimeZone" : String(NSTimeZone.localTimeZone()),
+			"DevicePreferedLanguage" : NSLocale.preferredLanguages().first ?? "",
+			"DeviceCFBundleDisplayName" : (NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleDisplayName") ?? "") as! String,
+			"DeviceCFBundleShortVersionString" : (NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") ?? "") as! String,
+			"DeviceCFBundleVersion" : (NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleVersion") ?? "") as! String,
+			"DeviceBundleIdentifier" : NSBundle.mainBundle().bundleIdentifier ?? "",
+			"DeviceDifferenceToGMT" : NSTimeZone.localTimeZone().secondsFromGMT / 3600
+		]
+	}
+	
 	private func POST(parameters: NSDictionary){
-
-
-		
 		do {
 			
 			let jsonData = try NSJSONSerialization.dataWithJSONObject(parameters, options: .PrettyPrinted)

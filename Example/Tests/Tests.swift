@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import NOTIFIT-Swift
+import NOTIFIT_Swift
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {

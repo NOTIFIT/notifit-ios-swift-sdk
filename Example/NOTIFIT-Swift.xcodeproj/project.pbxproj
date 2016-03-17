@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		352566B11C9B2D170002846F /* NOTIFIT_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352566B01C9B2D170002846F /* NOTIFIT_Swift.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		09108971800C8629D942B794 /* NOTIFIT-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "NOTIFIT-Swift.podspec"; path = "../NOTIFIT-Swift.podspec"; sourceTree = "<group>"; };
 		0D84893092A7EA400D370D67 /* Pods_NOTIFIT_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NOTIFIT_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		352566B01C9B2D170002846F /* NOTIFIT_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NOTIFIT_Swift.framework; path = "Pods/../build/Debug-iphoneos/NOTIFIT_Swift.framework"; sourceTree = "<group>"; };
 		3E793E563F6410125E8EF3F4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5400586AE72D1F6D230523FB /* Pods-NOTIFIT-Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NOTIFIT-Swift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NOTIFIT-Swift_Tests/Pods-NOTIFIT-Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* NOTIFIT-Swift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NOTIFIT-Swift_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352566B11C9B2D170002846F /* NOTIFIT_Swift.framework in Frameworks */,
 				67C63AD32A85CD6A3358B996 /* Pods_NOTIFIT_Swift_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +75,7 @@
 		43D528923F877290DB205903 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				352566B01C9B2D170002846F /* NOTIFIT_Swift.framework */,
 				AB8E0357B7E50B438D878D21 /* Pods_NOTIFIT_Swift_Example.framework */,
 				0D84893092A7EA400D370D67 /* Pods_NOTIFIT_Swift_Tests.framework */,
 			);
@@ -489,6 +493,10 @@
 			baseConfigurationReference = 6D4EC036CE40DF3ACF3752C0 /* Pods-NOTIFIT-Swift_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "NOTIFIT-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -502,6 +510,10 @@
 			baseConfigurationReference = CC86C4137FB75F8A05444BAF /* Pods-NOTIFIT-Swift_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "NOTIFIT-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

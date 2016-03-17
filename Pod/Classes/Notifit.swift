@@ -8,8 +8,8 @@
 
 import UIKit
 
-class Notifit: NSObject {
-	class func loginWithName(name: String, password: String){
+public class Notifit: NSObject {
+	public class func loginWithName(name: String, password: String){
 		NTFNetwork.api.login(name, password: password)
 	}
 	
