@@ -1,0 +1,25 @@
+{
+  "name": "NOTIFIT-Swift",
+  "version": "0.1.0",
+  "summary": "A short description of NOTIFIT-Swift.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/NOTIFIT-Swift",
+  "license": "MIT",
+  "authors": {
+    "Tomas Sykora, jr.": "jump@syky.cz"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/NOTIFIT-Swift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "NOTIFIT-Swift": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

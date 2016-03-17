@@ -1,0 +1,20 @@
+PODS:
+  - Nimble (3.0.0)
+  - NOTIFIT-Swift (0.1.0)
+  - Quick (0.8.0)
+
+DEPENDENCIES:
+  - Nimble (= 3.0.0)
+  - NOTIFIT-Swift (from `../`)
+  - Quick (~> 0.8.0)
+
+EXTERNAL SOURCES:
+  NOTIFIT-Swift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  NOTIFIT-Swift: 5f84a642b4c9d06d09e9979477d7c6a1bfef915a
+  Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
+
+COCOAPODS: 0.39.0
