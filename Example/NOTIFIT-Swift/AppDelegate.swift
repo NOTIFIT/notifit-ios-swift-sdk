@@ -15,9 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-		Notifit.loginWithName("AJTY", password: "Fekal123")
+		let settings = UIUserNotificationSettings(forTypes: [.Sound, .Alert, .Badge], categories: nil)
+		UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+		UIApplication.sharedApplication().registerForRemoteNotifications()
+		
 
+		Notifit.registerDeviceForProject("9da8f193-caed-e511-942b-00155d000710", forApplication: "d03312a1-caed-e511-942b-00155d000710")
+
+		
         return true
     }
 
@@ -42,7 +47,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+	
+	func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+//		Notifit.updateNotificationToken(deviceToken)
+	}
 
+	func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+		
+	}
 
 }
 

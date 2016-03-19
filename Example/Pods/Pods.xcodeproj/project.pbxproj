@@ -26,6 +26,14 @@
 		331F90AA0B350B1FC11BB9DFDDBAD64F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279AA6492631DEFA8C439A9C088EEB8A /* XCTest.framework */; };
 		33264C6A7A3536AD91EF42B3E8CC8220 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BB6589A73F51F073DF050F55D7F41 /* BeGreaterThanOrEqualTo.swift */; };
 		33514FEE6EA65605EFB6F1801834B692 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0C995C72A44C02A9369FA2BDB1F4FF /* AssertionDispatcher.swift */; };
+		3501DF9B1C9D8B1E00F47390 /* NTFDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3501DF9A1C9D8B1E00F47390 /* NTFDefaults.swift */; };
+		3501DF9C1C9D8B1E00F47390 /* NTFDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3501DF9A1C9D8B1E00F47390 /* NTFDefaults.swift */; };
+		3501DF9D1C9D8B1E00F47390 /* NTFDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3501DF9A1C9D8B1E00F47390 /* NTFDefaults.swift */; };
+		3501DF9F1C9D8F6F00F47390 /* NTFApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3501DF9E1C9D8F6F00F47390 /* NTFApplicationState.swift */; };
+		3501DFA01C9D8F6F00F47390 /* NTFApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3501DF9E1C9D8F6F00F47390 /* NTFApplicationState.swift */; };
+		3501DFA11C9D8F6F00F47390 /* NTFApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3501DF9E1C9D8F6F00F47390 /* NTFApplicationState.swift */; };
+		3501DFA21C9D919000F47390 /* NTFConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2DD9C5AB9805DA0D83889C6EBFD10 /* NTFConstants.swift */; };
+		3501DFA31C9D919700F47390 /* NTFConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2DD9C5AB9805DA0D83889C6EBFD10 /* NTFConstants.swift */; };
 		35B329D7E4FFF02E27BDE8A2A45F4116 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF695047E0AAFB3CA54EC10F0E97FD3 /* Configuration.swift */; };
 		35DABEECB6D000644E4F21BD66DBA05D /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2543809E4D3D9755B94735346ACDFF03 /* QCKDSL.m */; };
 		3A92AEE86034356AF8987F20EE1F82DF /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B6303CCFDEBF93094E92D50CAFF38 /* EndWith.swift */; };
@@ -159,6 +167,8 @@
 		2EE35E26D226F8892EE14B01C6A5B0ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FE24AE8654BDA8234080C23F6335E26 /* BeEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeEmpty.swift; path = Nimble/Matchers/BeEmpty.swift; sourceTree = "<group>"; };
 		33DD2CC5441C4540A072B29E4A257A9D /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Quick/DSL/DSL.swift; sourceTree = "<group>"; };
+		3501DF9A1C9D8B1E00F47390 /* NTFDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTFDefaults.swift; sourceTree = "<group>"; };
+		3501DF9E1C9D8F6F00F47390 /* NTFApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTFApplicationState.swift; sourceTree = "<group>"; };
 		38715BF4570032AE706B97AB11365E48 /* ExampleMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleMetadata.swift; path = Quick/ExampleMetadata.swift; sourceTree = "<group>"; };
 		39A19A010726D4605ACF3B1A69006EAB /* NOTIFIT-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "NOTIFIT-Swift.modulemap"; sourceTree = "<group>"; };
 		3F1975D001BFB447009180BAF8C14ADB /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
@@ -497,6 +507,8 @@
 				D2F699BAB52D65928FACBC60D2BD6B9F /* Notifit.swift */,
 				96C2DD9C5AB9805DA0D83889C6EBFD10 /* NTFConstants.swift */,
 				9C9FFC1BBB73FFC3A24AEBF6D119ACE1 /* NTFNetwork.swift */,
+				3501DF9A1C9D8B1E00F47390 /* NTFDefaults.swift */,
+				3501DF9E1C9D8F6F00F47390 /* NTFApplicationState.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -778,6 +790,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3501DFA31C9D919700F47390 /* NTFConstants.swift in Sources */,
+				3501DF9D1C9D8B1E00F47390 /* NTFDefaults.swift in Sources */,
 				859EEB0FE1EE56F010D812B7E01EB314 /* Callsite.swift in Sources */,
 				74E1429B9836F5AF8A58D1A7D9CABE61 /* Closures.swift in Sources */,
 				35B329D7E4FFF02E27BDE8A2A45F4116 /* Configuration.swift in Sources */,
@@ -786,6 +800,7 @@
 				804F3E88534D4EAE3A297A4E42C109CB /* ExampleGroup.swift in Sources */,
 				943C008E8ED01F6CD1E019DCD8F744CB /* ExampleHooks.swift in Sources */,
 				637B03FD626255334A84EE74D7064093 /* ExampleMetadata.swift in Sources */,
+				3501DFA11C9D8F6F00F47390 /* NTFApplicationState.swift in Sources */,
 				8968D92E6E1224D07311C6301DCBCAA6 /* Filter.swift in Sources */,
 				B913C7B4791E7829E247FCD3E71BDDDF /* NSString+QCKSelectorName.m in Sources */,
 				35DABEECB6D000644E4F21BD66DBA05D /* QCKDSL.m in Sources */,
@@ -802,10 +817,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3501DF9C1C9D8B1E00F47390 /* NTFDefaults.swift in Sources */,
 				A5B64F96BF3344A72CC1BBE1553B8F2B /* NOTIFIT-Swift-dummy.m in Sources */,
 				A50EE18A86C769819D3EC79C59301348 /* Notifit.swift in Sources */,
 				E198F0D8095874968AACE973C30872A6 /* NTFConstants.swift in Sources */,
 				DAD0F940FD2CC49BE91A234904789B1A /* NTFNetwork.swift in Sources */,
+				3501DFA01C9D8F6F00F47390 /* NTFApplicationState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,8 +845,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3501DFA21C9D919000F47390 /* NTFConstants.swift in Sources */,
 				CAAED5FB81DB035A9EC080917C783FA6 /* AdapterProtocols.swift in Sources */,
 				D429691F39B4C30A8993360FB8A3E334 /* AllPass.swift in Sources */,
+				3501DF9F1C9D8F6F00F47390 /* NTFApplicationState.swift in Sources */,
 				33514FEE6EA65605EFB6F1801834B692 /* AssertionDispatcher.swift in Sources */,
 				E6E7B15FAD6C56681511813DB2666478 /* AssertionRecorder.swift in Sources */,
 				0A6E71555F55082003A3DB2B03CA85D2 /* AsyncMatcherWrapper.swift in Sources */,
@@ -846,6 +865,7 @@
 				02DF5BD2281BA10105A447F95FCF8CF3 /* BeLogical.swift in Sources */,
 				F1D4A8A1FC68EFA7F45945908D70A352 /* BeNil.swift in Sources */,
 				B41E8E775408ACE233F29CE93388B270 /* Contain.swift in Sources */,
+				3501DF9B1C9D8B1E00F47390 /* NTFDefaults.swift in Sources */,
 				DEE170DD3064F7343884A4016546B762 /* DSL+Wait.swift in Sources */,
 				B0A26F58BA3E6222E50AE5AC883B8EAF /* DSL.m in Sources */,
 				58EBA2C1A43283FB2188AB1FB592D32B /* DSL.swift in Sources */,
