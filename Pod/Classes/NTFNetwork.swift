@@ -30,6 +30,7 @@ class NTFNetwork: NSObject {
 				.stringByTrimmingCharactersInSet( characterSet )
 				.stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
 			
+			NTFLOG_I(deviceTokenString)
 			parameters.updateValue(deviceTokenString, forKey: "NotificationToken")
 		}
 		

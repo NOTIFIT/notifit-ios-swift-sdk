@@ -20,6 +20,17 @@ it, simply add the following line to your Podfile:
 pod "NOTIFIT-Swift"
 ```
 
+## Usage
+
+### Register device
+
+You can register device with running your running application to NOTIFIT server just by adding this line to your `AppDelegate`
+
+```
+Notifit.registerDeviceForProject("93c5752c-aaee-e511-942b-00155d000710", forApplication: "ab64e743-aaee-e511-942b-00155d000710")
+```
+
+
 ## Author
 
 Tomas Sykora, jr., jump@syky.cz
