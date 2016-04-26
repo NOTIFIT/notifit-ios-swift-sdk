@@ -19,6 +19,7 @@ class NTFNetwork: NSObject {
 	}
 	
 	func updateNotificationToken(notificationToken: NSData?){
+		addObservers()
 		var parameters  = [
 			NTFConstants.value.applicationToken : NTFDefaults.getApplicationToken(),
 			NTFConstants.value.projectToken: NTFDefaults.getProjectToken()
@@ -39,6 +40,8 @@ class NTFNetwork: NSObject {
 	}
 	
 	func registerDeviceForProject(projectToken: String, forApplication applicationToken: String){
+		addObservers()
+
 		var parameters  = [
 			"ProjectToken": projectToken,
 			"ApplicationToken": applicationToken,
@@ -55,11 +58,11 @@ class NTFNetwork: NSObject {
 	}
 	
 	private func addObservers(){
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "didFinishLaunchingWithOptions", name: UIApplicationDidFinishLaunchingNotification, object: nil)
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillResignActive", name: UIApplicationWillResignActiveNotification, object: nil)
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationDidEnterBackground", name: UIApplicationDidEnterBackgroundNotification, object: nil)
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground", name: UIApplicationWillEnterForegroundNotification, object: nil)
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationDidBecomeActive", name: UIApplicationDidBecomeActiveNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NTFNetwork.didFinishLaunchingWithOptions), name: UIApplicationDidFinishLaunchingNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NTFNetwork.applicationWillResignActive), name: UIApplicationWillResignActiveNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NTFNetwork.applicationDidEnterBackground), name: UIApplicationDidEnterBackgroundNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NTFNetwork.applicationWillEnterForeground), name: UIApplicationWillEnterForegroundNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NTFNetwork.applicationDidBecomeActive), name: UIApplicationDidBecomeActiveNotification, object: nil)
 	}
 	
 	
