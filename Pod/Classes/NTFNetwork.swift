@@ -162,7 +162,6 @@ class NTFNetwork: NSObject {
 										NTFDefaults.setCommunicationToken(communicationToken)
 									}
 								}
-								
 							} catch (let error as NSError) {
 								NTFLOG_F(" \(error)")
 							}
