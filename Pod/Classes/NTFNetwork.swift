@@ -153,6 +153,10 @@ class NTFNetwork: NSObject {
 					
 					if let url = httpResponse.URL?.absoluteString {
 						NTFLOG_I("Status: \(httpResponse.statusCode) URL: \(url)")
+						if httpResponse.statusCode != 200 {
+							NTFDefaults.deleteCommunicationToken()
+							self.registerDeviceForProject(NTFDefaults.getProjectToken(), forApplication: NTFDefaults.getApplicationToken())
+						}
 						if url == NTFConstants.api.router.register{
 							do {
 								if let result = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String:AnyObject] {
