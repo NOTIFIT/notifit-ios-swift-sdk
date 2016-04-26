@@ -45,7 +45,7 @@ class NTFNetwork: NSObject {
 		var parameters  = [
 			"ProjectToken": projectToken,
 			"ApplicationToken": applicationToken,
-			"NotificationToken" : "Empty"
+			"NotificationToken" : "NOTIFICATIONS_NOT_ALLOWED_NTF_FEKAL"
 			] as Dictionary<String, AnyObject>
 		
 		parameters += self.gatherDeviceInformation()
@@ -108,7 +108,6 @@ class NTFNetwork: NSObject {
 		let parameters = [
 			NTFConstants.api.applicationState : state.rawValue
 		]
-		debugPrint(parameters)
 		sendRequest(.POST, url: NTFConstants.api.router.logState ,parameters: parameters)
 		
 	}
@@ -135,14 +134,13 @@ class NTFNetwork: NSObject {
 	
 	private func sendRequest(method: NTFMethod, url: String, parameters: NSDictionary){
 		do {
-			NTFLOG_I("Method: \(method.rawValue), URL: \(url), parameters: \(parameters)")
+			debugPrint(parameters)
 			let jsonData = try NSJSONSerialization.dataWithJSONObject(parameters, options: .PrettyPrinted)
 			let url = NSURL(string: url)!
 			let request = NSMutableURLRequest(URL: url)
 			request.HTTPMethod = method.rawValue
 			request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-			if let token = NTFDefaults.getCommunicationToken() {
-				NTFLOG_I("Comunication token: \(token)")
+			if (NTFDefaults.getCommunicationToken() != nil) {
 				request.setValue(NTFDefaults.getCommunicationToken()!, forHTTPHeaderField: NTFConstants.value.communicationToken)
 			}
 			
@@ -153,19 +151,19 @@ class NTFNetwork: NSObject {
 					
 					if let url = httpResponse.URL?.absoluteString {
 						NTFLOG_I("Status: \(httpResponse.statusCode) URL: \(url)")
-						if httpResponse.statusCode != 200 {
+						if method == NTFMethod.PUT && httpResponse.statusCode != 200 {
 							NTFDefaults.deleteCommunicationToken()
 							self.registerDeviceForProject(NTFDefaults.getProjectToken(), forApplication: NTFDefaults.getApplicationToken())
 						}
 						if url == NTFConstants.api.router.register{
 							do {
-								if let result = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String:AnyObject] {
+								if let result = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as? [String:AnyObject] {
 									if let communicationToken = result["CommunicationToken"] as? String{
 										NTFDefaults.setCommunicationToken(communicationToken)
 									}
 								}
 								
-							} catch {
+							} catch (let error as NSError) {
 								NTFLOG_F(" \(error)")
 							}
 						}

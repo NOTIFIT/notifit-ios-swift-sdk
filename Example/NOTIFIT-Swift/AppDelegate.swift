@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		UIApplication.sharedApplication().registerForRemoteNotifications()
 		
 
-		Notifit.registerDeviceForProject("9da8f193-caed-e511-942b-00155d000710", forApplication: "d03312a1-caed-e511-942b-00155d000710")
+		Notifit.registerDeviceForProject("9a4598cf-9aef-4d5a-9da6-8fec620a2880", forApplication: "f04318d9-57c3-4683-8f40-6f1bba93220e")
 
 		
         return true
